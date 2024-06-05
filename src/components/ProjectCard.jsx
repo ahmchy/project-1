@@ -28,7 +28,7 @@ const Project = ({ projects }) => {
                   alt="Shoes"
                 />
               </div> */}
-              <div className="flex flex-col justify-around pt-5 mt-5 md:pt-0">
+              {/* <div className="flex flex-col justify-around pt-5 mt-5 md:pt-0">
                 <div className="">
                   <h2 className="text-2xl font-semibold capitalize md:text-2xl lg:text-3xl">
                     {project.name}
@@ -48,6 +48,40 @@ const Project = ({ projects }) => {
                       <p className="capitalize">{item}</p>
                     </div>
                   ))}
+                </div>
+              </div> */}
+
+              <div className="flex items-center justify-center p-10 bg-gray-200">
+                <div className="container">
+                  <div className="text-center">
+                    <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-3xl">
+                      {project.name}
+                    </h2>
+                    <h3 className="text-xl md:text-2xl mt-10">
+                      {project.description.length > 110
+                        ? project.description.slice(0, 50) + "..."
+                        : project.description}{" "}
+                    </h3>
+                  </div>
+                  <div className="grid grid-cols-2 mt-10 justify-center">
+                    
+                    {
+                       project.technologies.map((item, index) => (
+                    <div key={index} className="m-3">
+                      <a
+                        href="#"
+                        title="Quicktoolz On Facebook"
+                        className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center"
+                      >
+                        <span className="mx-auto">{item}</span>
+                      </a>
+                    </div>
+
+
+                       ))
+                    }
+
+                  </div>
                 </div>
               </div>
             </a>

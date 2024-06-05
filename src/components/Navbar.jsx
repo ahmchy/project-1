@@ -1,14 +1,14 @@
 const Navbar = () => {
   return (
-    <div>
-      <nav className="bg-neutral/10 border-gray ">
+    <div className="sticky top-0 bg-white box-shadow-2xl">
+      <nav className="bg-neutral/10 border-gray  ">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
           <a
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-              PD John
+              Project 1
             </span>
           </a>
           <button
