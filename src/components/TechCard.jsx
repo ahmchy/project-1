@@ -3,12 +3,12 @@ const TechCard = ({ skills }) => {
   return (
     <div id="skills" className="max-w-screen-xl mt-10 mx-auto">
       <p className="mt-10 text-6xl font-bold "> Skills</p>
-      <div className="grid grid-cols-5 pb-5 gap-7">
+      <div className="grid grid-cols-1 pb-5 gap-1">
         {" "}
         {skills.map((skill, index) => (
           <article
             key={index}
-            className="mt-10 hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]"
+            className="mt-10 hover:animate-background rounded-xl w-9/12 mx-auto bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]"
           >
             <div className="rounded-[10px] bg-white p-4 !pt-10 sm:p-6">
               {/* <time datetime="2022-10-10" className="block text-xs text-gray-500"> 10th Oct 2022 </time> */}
@@ -22,9 +22,7 @@ const TechCard = ({ skills }) => {
               </a>
               <a href="#">
                 <h3 className="mt-7 text-md font-medium text-gray-900">
-                {skill.description.length > 110
-                      ? skill.description.slice(0, 50) + "..."
-                      : skill.description}{" "}
+                {skill.description}
                 </h3>
               </a>
 

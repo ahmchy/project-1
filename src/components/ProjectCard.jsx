@@ -2,13 +2,13 @@ const Project = ({ projects }) => {
   console.log(projects);
   return (
     <div id="projects" className="max-w-screen-xl mx-auto">
-      <p className="mt-10 text-6xl font-bold "> Projects</p>
-      <div className="grid grid-cols-3 gap-5 pb-5">
+      <p className="mt-10 text-6xl font-bold pb-10 "> Projects</p>
+      <div className="grid grid-cols-1 gap-1 pb-10">
         {" "}
         {projects.map((project, index) => (
           <div
             key={index}
-            className="mx-auto my-10 border border-solid shadow-md bg-warning/10 border-warning/5 rounded-small bg-zinc-50 hover:shadow-xl hover:border hover:border-primary lg:my-14"
+            className="mx-auto my-3  border border-solid shadow-md bg-warning/10 border-warning/5 rounded-small bg-zinc-50 hover:shadow-xl hover:border hover:border-primary "
           >
             <a
               //   to={`/projectdetails/${project.slug}`}
@@ -63,7 +63,7 @@ const Project = ({ projects }) => {
                         : project.description}{" "}
                     </h3>
                   </div>
-                  <div className="grid grid-cols-2 mt-10 justify-center">
+                  <div className="flex mt-10 justify-center">
                     
                     {
                        project.technologies.map((item, index) => (
